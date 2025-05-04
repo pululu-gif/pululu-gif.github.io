@@ -1,0 +1,283 @@
+<html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Buscador de Temas</h1>
+    <input type="text" id="searchInput" placeholder="Escribe lo que buscas...">
+    <button id="searchButton">Buscar</button>
+    
+    <div id="content">
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RODANDO CON RESPONSABILIDAD</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+    }
+    /* Menú superior */
+    .menu {
+      background-color: #333;
+      overflow: hidden;
+    }
+    .menu a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+    .menu a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    /* Contenedor de contenido */
+    .content {
+      padding: 20px;
+    }
+    /* Título especial */
+    .titulo-especial {
+      font-size: 50px;
+      font-weight: bold;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      background: linear-gradient(45deg, #0077ff, #00ff88);
+      padding: 15px 40px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      margin: 20px auto;
+      width: fit-content;
+      position: relative;
+      overflow: hidden;
+    }
+    .titulo-especial::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: skewX(-30deg);
+      transition: left 0.7s ease-in-out;
+    }
+    .titulo-especial:hover::after {
+      left: 100%;
+    }
+    /* Subtemas ocultos por defecto */
+    .subtema {
+      display: none;
+      padding: 20px;
+      margin-top: 20px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+  </style>
+  <script>
+    function mostrarSubtema(id) {
+      // Oculta todos los subtemas
+      var subtemas = document.getElementsByClassName("subtema");
+      for (var i = 0; i < subtemas.length; i++) {
+        subtemas[i].style.display = "none";
+      }
+      // Muestra el subtema seleccionado
+      document.getElementById(id).style.display = "block";
+    }
+    window.onload = function() {
+      // Muestra el primer subtema al cargar la página
+      mostrarSubtema('subtema1');
+    }
+  </script>
+</head>
+<body>
+  <!-- Menú superior -->
+  <div class="menu">
+    <a href="#" onclick="mostrarSubtema('subtema1')">Equipamiento de Seguridad</a>
+    <a href="#" onclick="mostrarSubtema('subtema2')">Normas de Tránsito</a>
+    <a href="#" onclick="mostrarSubtema('subtema3')">Factores de Riesgo</a>
+    <a href="#" onclick="mostrarSubtema('subtema4')">Mantenimiento de Motos</a>
+    <a href="#" onclick="mostrarSubtema('subtema5')">Consejos de Manejo</a>
+    <a href="#" onclick="mostrarSubtema('subtema6')">Preguntas Frecuentes</a>
+    <a href="#" onclick="mostrarSubtema('subtema7')">Contacto</a>
+  </div>
+
+  <div class="content">
+    <h1 class="titulo-especial">RODANDO CON RESPONSABILIDAD</h1>
+
+    <!-- Subtema 1: Equipamiento de Seguridad -->
+    <div id="subtema1" class="subtema">
+      <h2>Equipamiento de Seguridad para Motociclistas</h2>
+      <ul>
+        <li><strong>Casco:</strong> Certificado y de tamaño adecuado.</li>
+        <li><strong>Chaqueta protectora:</strong> Con refuerzos en codos, hombros y espalda.</li>
+        <li><strong>Guantes:</strong> Para proteger las manos.</li>
+        <li><strong>Pantalones con protecciones:</strong> Material resistente con refuerzos.</li>
+        <li><strong>Botas de moto:</strong> Cubren los tobillos y ofrecen sujeción.</li>
+        <li><strong>Rodilleras y coderas:</strong> Para mayor protección.</li>
+        <li><strong>Chaleco reflectante:</strong> Mejora la visibilidad en la carretera.</li>
+        <li><strong>Protector de espalda:</strong> Reduce impactos en la columna.</li>
+      </ul>
+    </div>
+
+    <!-- Subtema 2: Normas de Tránsito -->
+    <div id="subtema2" class="subtema">
+      <h2>Normas y Reglas de Tránsito</h2>
+      <table border="1" cellspacing="0" cellpadding="10" style="margin: auto; border-collapse: collapse;">
+        <tr style="background-color: #2980b9; color: white;">
+          <th>Norma</th>
+        </tr>
+        <tr>
+          <td>Respetar los límites de velocidad.</td>
+        </tr>
+        <tr>
+          <td>No zigzaguear entre autos.</td>
+        </tr>
+        <tr>
+          <td>Usar siempre luces y direccionales.</td>
+        </tr>
+        <tr>
+          <td>No manejar en estado de ebriedad.</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Subtema 3: Factores de Riesgo -->
+    <div id="subtema3" class="subtema">
+      <h2>Factores de Riesgo en la Conducción</h2>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+        <div style="width: 250px; background: white; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); text-align: center;">
+          <img src="C:\Users\josue\CrossDevice\POCO X6 5G\storage\Documents\usando celular.jpg" style="width: 100%; height: 150px; object-fit: cover;">
+          <h3>Uso del Celular</h3>
+          <p>Distrae la atención y aumenta el riesgo de accidente.</p>
+        </div>
+        <div style="width: 250px; background: white; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); text-align: center;">
+          <img src="C:\Users\josue\CrossDevice\POCO X6 5G\storage\Documents\ebrio.jpeg" style="width: 100%; height: 150px; object-fit: cover;">
+          <h3>Conducir en Ebriedad</h3>
+          <p>Reduce la capacidad de reacción y el control del vehículo.</p>
+        </div>
+        <div style="width: 250px; background: white; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); text-align: center;">
+          <img src= style="width: 100%; height: 150px; object-fit: cover;">
+          <h3>Manejar Cansado</h3>
+          <p>La fatiga puede provocar somnolencia al volante.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Subtema 4: Mantenimiento de Motos -->
+    <div id="subtema4" class="subtema">
+      <h2>Mantenimiento de Motocicletas</h2>
+      <p>Consejos para mantener tu moto en óptimas condiciones:</p>
+      <ul>
+        <li><strong>Cambio de Aceite:</strong> Lubrica el motor y previene el desgaste.</li>
+        <li><strong>Revisión de Frenos:</strong> Verifica pastillas y líquido para garantizar la seguridad.</li>
+        <li><strong>Estado de los Neumáticos:</strong> Comprueba la presión y el desgaste.</li>
+        <li><strong>Lubricación de la Cadena:</strong> Mantén la cadena limpia y lubricada.</li>
+        <li><strong>Revisión de la Batería:</strong> Asegura que la carga y los terminales estén en buen estado.</li>
+      </ul>
+    </div>
+
+    <!-- Subtema 5: Consejos de Manejo -->
+    <div id="subtema5" class="subtema">
+      <h2>Consejos para un Manejo Seguro</h2>
+      <ul>
+        <li>Anticipa los movimientos de los vehículos a tu alrededor.</li>
+        <li>Mantén ambas manos en el manillar y los pies en los estribos.</li>
+        <li>Utiliza ropa de colores llamativos para aumentar la visibilidad.</li>
+      </ul>
+    </div>
+
+    <!-- Subtema 6: Preguntas Frecuentes -->
+    <div id="subtema6" class="subtema">
+      <h2>Preguntas Frecuentes</h2>
+      <div style="max-width: 600px; margin: auto; text-align: left;">
+        <div style="background: white; margin: 10px 0; padding: 10px; border-radius: 5px; box-shadow: 2px 2px 10px rgba(0,0,0,0.1);">
+          <button style="width: 100%; padding: 10px; background: #007bff; color: white; border: none; cursor: pointer; font-weight: bold;"
+            onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block' ? 'none' : 'block')">
+            ¿Cuál es el equipo de seguridad obligatorio?
+          </button>
+          <div style="display: none; padding: 10px; background: #e9ecef; border-radius: 5px; margin-top: 5px;">
+            <p>Incluye casco, guantes, chaqueta, pantalones reforzados y botas adecuadas.</p>
+          </div>
+        </div>
+        <div style="background: white; margin: 10px 0; padding: 10px; border-radius: 5px; box-shadow: 2px 2px 10px rgba(0,0,0,0.1);">
+          <button style="width: 100%; padding: 10px; background: #007bff; color: white; border: none; cursor: pointer; font-weight: bold;"
+            onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block' ? 'none' : 'block')">
+            ¿Por qué es importante usar casco?
+          </button>
+          <div style="display: none; padding: 10px; background: #e9ecef; border-radius: 5px; margin-top: 5px;">
+            <p>Reduce el riesgo de lesiones graves en la cabeza en caso de accidente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Subtema 7: Contacto -->
+    <div id="subtema7" class="subtema">
+      <h2>Contacto</h2>
+      <p>Puedes comunicarte a través del correo: Rodandoconresponsabilidad.com o llamarnos al +529689317864.</p>
+    </div>
+  </div>
+</body>
+</html>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
